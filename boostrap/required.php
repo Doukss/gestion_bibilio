@@ -11,4 +11,4 @@ require_once "../models/res.model.php";
 require_once "../models/ouvrage.model.php";
 require_once "../models/rayon.model.php";
 require_once "../models/exemplaire.model.php";
-// require_once "../models/filiere.model.php";
+require_once "../models/adhr.model.php";

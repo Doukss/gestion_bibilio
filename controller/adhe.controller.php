@@ -12,7 +12,7 @@ $data = ["role" => $role, "page" => $page];
 
 switch ($page) {
     case 'dashboard':
-       
+        
         $data += [
             "ouvrage" => getCountAllOuvrage(),
             "auteur" => getCountAllAuteur(),
@@ -21,43 +21,33 @@ switch ($page) {
         ];
             renderView("responsable/dashboard", $data, "dashboard");
             break;      
-    case 'ouvrage': 
-        $ouvrages = getOuvrages();
-        $data = [
-            "role" => $role,
-            "page" => $page,
-            "ouvrages" => $ouvrages
-        ];
+    case 'catalogue': 
+        // $catalogues = getAllCatalogues();
+        // $data = [
+        //     "role" => $role,
+        //     "page" => $page,
+        //     "catalogues" => $catalogues
+        // ];
     renderView("responsable/ouvrage", $data, "dashboard");
     break;
-    case 'auteur':
-        $auteurs = getAllAuteur();
+    case 'compte':
+        $comptes = getAllComptes();
         $data = [
             "role" => $role,
             "page" => $page,
-            "auteurs" => $auteurs
+            "comptes" => $comptes
         ];
         renderView("responsable/cours", $data, "dashboard");
         break;
-    case 'rayon':
-        $rayons = getRyons();
+    case 'pret':
+        $prets = getPrets();
         $data = [
             "role" => $role,
             "page" => $page,
-            "rayons" => $rayons
+            "prets" => $prets
         ];
-            renderView("responsable/rayon", $data, "dashboard");
+            renderView("responsable/prets", $data, "dashboard");
             break;
-        
-    case 'exemplaire':
-        $exemplaires = getExemplaire();
-        $data = [
-            "role" => $role,
-            "page" => $page,
-            "exemplaires" => $exemplaires
-        ];
-        renderView("responsable/exemplaire", $data, "dashboard");
-        break;
     
     default:
         redirection("notFound", "error");

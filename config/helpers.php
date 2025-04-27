@@ -21,6 +21,7 @@ function redirectAfterError(string $role)
         case 'responsable':
             return "controller=resbibilio&page=dashboard";
         case 'adherent':
+            return "controller=adherent&page=dashboard";
             return "";
         default:
             redirection("security", "connexion");

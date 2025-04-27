@@ -1,7 +1,5 @@
 <?php
 
-// session_start();
-
 $page = isset($_GET["page"]) ? $_GET["page"] : "connexion";
 
 switch ($page) {
@@ -14,7 +12,6 @@ switch ($page) {
                 $mot_de_passe = $_POST["password"] ?? "";
                 
                 $user = credentialUser($email, $mot_de_passe);
-// dd($user);
                 if ($user) {
                     $_SESSION["user"] = $user;
                     redirectByRole($user["role"]); 

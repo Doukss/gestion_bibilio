@@ -3,7 +3,7 @@
 $mesControllers = [
     "security" => "../controller/security.controller.php",
     "resbibilio" => "../controller/resbibilio.controller.php",
-    "visiteur" => "../controller/visiteur.controller.php",
+    "adhe" => "../controller/adhe.controller.php",
     "notfound" => "../controller/notfound.controller.php",
 ];
 

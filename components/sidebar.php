@@ -49,7 +49,36 @@
                     
                 </ul>
             </nav>
-        
+            <?php elseif ($role === "adhérent"): ?>
+            <nav>
+                <ul>
+                    <li class="py-2 px-4 <?= $page === 'dashboard' ? 'bg-orange-600 text-white shadow' : 'hover:bg-gray-700' ?> rounded-3xl">
+                        <a
+                            href="<?= WEBROOT ?>controller=adhe&page=dashboard"
+                            class="font-medium gap-3 flex items-center text-sm">
+                            <i class="ri-home-3-line text-lg"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="py-2 px-4 <?= $page === 'catalogue' ? 'bg-orange-600 text-white shadow' : 'hover:bg-gray-700' ?> rounded-3xl">
+                        <a
+                            href="<?= WEBROOT ?>controller=adhe&page=catalogue"
+                            class="font-medium gap-3 flex items-center text-sm">
+                            <i class="ri-group-line text-lg"></i>
+                            <span>catalogues</span>
+                        </a>
+                    </li>
+                    <li class="py-2 px-4 <?= $page === 'compte' ? 'bg-orange-600 text-white shadow' : 'hover:bg-gray-700' ?> rounded-3xl">
+                        <a
+                            href="<?= WEBROOT ?>controller=adhe&page=compte"
+                            class="font-medium gap-3 flex items-center text-sm">
+                            <i class="ri-user-line text-lg"></i>
+                            <span>compte</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
         <?php endif; ?>
     </div>
     <a href="<?= WEBROOT ?>controllers=security&page=deconnexion">
